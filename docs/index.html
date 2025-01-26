@@ -93,6 +93,11 @@
                 ]
             }
         },
+        select: (info) => {
+            console.log('info', info.start, info.end);
+            const event = ec.addEvent({start: info.start, end: info.end});
+            console.log('event', event.start, event.end);
+        },
         dayMaxEvents: true,
         nowIndicator: true,
         selectable: true
