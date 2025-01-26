@@ -94,9 +94,11 @@
             }
         },
         select: (info) => {
-            console.log('info', info.start, info.end);
+            console.log('info:', info.start, info.end);
+            // eg. info: Tue Jan 28 2025 15:00:00 GMT+0800 (Australian Western Standard Time) Tue Jan 28 2025 17:00:00 GMT+0800 (Australian Western Standard Time)
             const event = ec.addEvent({start: info.start, end: info.end});
-            console.log('event', event.start, event.end);
+            console.log('event:', event.start, event.end);
+            // eg. event: Tue Jan 28 2025 23:00:00 GMT+0800 (Australian Western Standard Time) Wed Jan 29 2025 01:00:00 GMT+0800 (Australian Western Standard Time)
         },
         dayMaxEvents: true,
         nowIndicator: true,
